@@ -1,36 +1,26 @@
-body {
-  background-color: #eee;
-  font-family: "Montserrat", sans-serif;
-  color: #555;
-}
-
-.registerLabel {
-  margin-top: 20px;
-}
-
-.registerDiv {
+.loginDiv {
   text-align: center;
   width: 500px;
-  height: 800px;
-  margin: 50px auto 0 auto;
+  height: 500px;
+  margin: 70px auto 0 auto;
 }
 
-.headingRegister {
+.headingLogin {
   color: black;
-  margin: 50px 0 25px 0;
+  margin: 50px 0;
   line-height: 1.2;
   font-weight: 700;
   font-size: 400%;
 }
 
-.registerInput {
+.inputLogin {
   border: 1px solid rgba(5, 5, 5, 0.4);
   background-color: rgb(241, 244, 245);
   width: 400px;
   border-radius: 3px;
   font-family: "Source Sans Pro", sans-serif;
   padding: 10px 15px;
-  margin: 0 auto 20px auto;
+  margin: 0 auto 10px auto;
   display: block;
   text-align: center;
   font-size: 18px;
@@ -38,7 +28,7 @@ body {
   font-weight: 300;
 }
 
-.registerButton {
+.buttonLogin {
   appearance: none;
   outline: 0;
   background-color: #6bbe92;
@@ -47,23 +37,9 @@ body {
   border-radius: 3px;
   width: 400px;
   font-size: 18px;
-  margin-bottom: 10px;
-  opacity: 0.8;
 }
 
-.registerButton:hover {
+.buttonLogin:hover {
   opacity: 1;
   border: 1px solid black;
-}
-
-.registerImg {
-  margin-top: 5px;
-  width: 30px;
-  height: 30px;
-  opacity: 0.8;
-  cursor: pointer;
-}
-
-.registerImg:hover {
-  opacity: 1;
 }

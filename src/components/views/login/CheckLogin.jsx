@@ -1,3 +1,4 @@
+import loginStyles from "./loginStyles.css";
 import { UserContext } from "../../../contexts/UserProvider";
 import { useContext, useState, useRef } from "react";
 
@@ -34,12 +35,26 @@ const CheckLogin = () => {
 
   return (
     <>
-      <div>
-        <h2>Login</h2>
-        <input type="text" placeholder="Email..." ref={email} />
-        <input type="password" placeholder="Password..." ref={password} />
-        <button onClick={checkInput}>Login</button>
-        <label>
+      <div className="loginDiv border">
+        <h2 className="headingLogin">Login</h2>
+        <input
+          className="inputLogin"
+          type="text"
+          placeholder="Email"
+          ref={email}
+        />
+        <input
+          className="inputLogin"
+          type="password"
+          placeholder="Password"
+          ref={password}
+        />
+        <button className="buttonLogin" onClick={checkInput}>
+          Login
+        </button>
+        <br></br>
+        <br></br>
+        <label className="labelLogin">
           {result} {userName}
         </label>
       </div>

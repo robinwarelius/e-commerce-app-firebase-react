@@ -1,44 +1,53 @@
 import registerStyles from "./registerStyles.css";
+import homeImg from "../../../images/home.png";
 import { UserContext } from "../../../contexts/UserProvider";
-import { useContext } from "react";
-import { useRef, useState } from "react";
+import { RegistrationContext } from "../../../contexts/RegistrationProvider";
+import { useRef, useState, useContext } from "react";
 
 const Register = () => {
-  const [result, setResult] = useState("");
   const { users } = useContext(UserContext);
+  const { registerUser } = useContext(RegistrationContext);
+  const [hideButton, setHideButton] = useState("hidden");
+  const [result, setResult] = useState("");
   const firstname = useRef("");
   const lastname = useRef("");
   const personalNumber = useRef("");
   const email = useRef("");
-  const password01 = useRef("");
-  const password02 = useRef("");
+  const password = useRef("");
+  const confirmPassword = useRef("");
 
   const handleInput = () => {
     const newFirstname = firstname.current.value;
     const newLastname = lastname.current.value;
     const newPersonalNumber = personalNumber.current.value;
     const newEmail = email.current.value;
-    const newPassword01 = password01.current.value;
-    const newPassword02 = password02.current.value;
+    const newPassword = password.current.value;
+    const newConfirmPassword = confirmPassword.current.value;
 
     let result = users.filter((user) => {
       if (user.email === newEmail) {
-        return "Fail";
+        return "succed";
       }
     });
 
     if (
       result.length === 0 &&
-      newPassword01 === newPassword02 &&
-      newPassword01 != "" &&
-      newPassword02 != "" &&
-      newFirstname != "" &&
-      newLastname != "" &&
-      newPersonalNumber != "" &&
-      newPersonalNumber.length === 10
+      newPassword === newConfirmPassword &&
+      newPassword !== "" &&
+      newConfirmPassword !== "" &&
+      newFirstname !== "" &&
+      newLastname !== "" &&
+      newPersonalNumber !== ""
     ) {
       setResult("Registration successful!");
-      // Skicka in result till RegistrationProvider metoden...
+      setHideButton("");
+      registerUser(
+        newEmail,
+        newFirstname,
+        newLastname,
+        newPassword,
+        newPersonalNumber
+      );
     } else {
       setResult("Registration faild! Try again...");
     }
@@ -46,37 +55,64 @@ const Register = () => {
 
   return (
     <>
-      <div className="result-div">
-        <h2>Register Account</h2>
-        <hr />
+      <div className="registerDiv border">
+        <h2 className="headingRegister">Register Account</h2>
+
+        <input
+          placeholder="Firstname"
+          className="registerInput"
+          type="text"
+          ref={firstname}
+        />
+
+        <input
+          placeholder="Lastname"
+          className="registerInput"
+          type="text"
+          ref={lastname}
+        />
+
+        <input
+          className="registerInput"
+          type="text"
+          placeholder="YYYYMMDD-XXXX"
+          ref={personalNumber}
+        />
+
+        <input
+          placeholder="Email"
+          className="registerInput"
+          type="text"
+          ref={email}
+        />
+
+        <input
+          placeholder="Password"
+          className="registerInput"
+          type="text"
+          ref={password}
+        />
+
+        <input
+          placeholder="Confirm password"
+          className="registerInput"
+          type="text"
+          ref={confirmPassword}
+        />
+        <button className="registerButton" onClick={handleInput}>
+          Submit
+        </button>
         <br></br>
-        <label>Firstname</label>
+        <label className="registerLabel">{result}</label>
         <br></br>
-        <input type="text" ref={firstname} />
-        <br></br>
-        <label>Lastname</label>
-        <br></br>
-        <input type="text" ref={lastname} />
-        <br></br>
-        <label>Personalnumber</label>
-        <br></br>
-        <input type="text" placeholder="YYYYMMDD-XXXX" ref={personalNumber} />
-        <br></br>
-        <label>Email</label>
-        <br></br>
-        <input type="text" ref={email} />
-        <br></br>
-        <label>Password</label>
-        <br></br>
-        <input type="text" ref={password01} />
-        <br></br>
-        <label>Repeat password</label>
-        <br></br>
-        <input type="text" ref={password02} />
-        <br></br>
-        <button onClick={handleInput}>Submit</button>
-        <br></br>
-        <label>{result}</label>
+        <img
+          className="registerImg"
+          src={homeImg}
+          hidden={hideButton}
+          onClick={() => {
+            window.location.reload();
+          }}
+        />
       </div>
     </>
   );

@@ -1,0 +1,21 @@
+.contactDiv {
+  margin: 50px auto;
+  width: 500px;
+  height: 500px;
+  text-align: left;
+}
+
+.contactDiv p {
+  color: black;
+  font-weight: 600;
+  font-size: 130%;
+  line-height: 2;
+}
+
+.contactHeading {
+  color: black;
+  margin-top: 100px;
+  line-height: 1.2;
+  font-weight: 700;
+  font-size: 400%;
+}

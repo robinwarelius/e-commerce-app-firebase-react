@@ -1,0 +1,103 @@
+.headingCart {
+  color: black;
+  margin: 50px 0 25px 0;
+  line-height: 1.2;
+  font-weight: 700;
+  font-size: 400%;
+  text-align: center;
+}
+
+.productDivCart {
+  width: 480px;
+  margin: 0 auto 0 auto;
+  background-color: white;
+  position: relative;
+  box-shadow: 0 1px 5px rgb(138, 137, 137);
+}
+
+.productDivCart img {
+  width: 90px;
+  height: 90px;
+}
+
+.productDivCart p {
+  margin: 5px 5px;
+  padding: 0;
+}
+
+.hrCart {
+  margin: 0;
+  padding: 0;
+}
+
+.inputDivCart {
+  width: 480px;
+  margin: 30px auto;
+  text-align: center;
+}
+
+.inputDivCart input {
+  border: 1px solid rgba(5, 5, 5, 0.4);
+  background-color: rgb(241, 244, 245);
+  width: 480px;
+  border-radius: 3px;
+  font-family: "Source Sans Pro", sans-serif;
+  padding: 10px 15px;
+  margin: 0 auto 20px auto;
+  display: block;
+  text-align: center;
+  font-size: 18px;
+  color: black;
+  font-weight: 300;
+}
+
+.cartButton {
+  appearance: none;
+  outline: 0;
+  background-color: #dba39a;
+  border: 0;
+  padding: 10px 15px;
+  border-radius: 3px;
+  width: 480px;
+  font-size: 18px;
+  margin-bottom: 10px;
+  opacity: 0.8;
+}
+
+.cartButton:hover {
+  opacity: 1;
+  border: 1px solid black;
+}
+
+#totalPriceId {
+  text-align: right;
+  font-weight: bold;
+  margin: 0 auto;
+}
+
+.emptyDiv {
+  width: 500px;
+  margin: 50px auto 0 auto;
+  text-align: center;
+}
+
+.emtyImg {
+  width: 500px;
+  height: 500px;
+  text-align: center;
+}
+
+#deleteImg {
+  width: 40px;
+  height: 40px;
+  opacity: 0.7;
+  cursor: pointer;
+  position: absolute;
+  bottom: 25px;
+  left: 430px;
+}
+
+#deleteImg:hover {
+  opacity: 1;
+  cursor: pointer;
+}

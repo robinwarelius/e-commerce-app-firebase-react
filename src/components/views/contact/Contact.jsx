@@ -1,9 +1,12 @@
+import contactStyles from "./contactStyles.css";
+
 const Contact = () => {
   return (
-    <div>
-      <h3>Kontakt uppgifter</h3>
-      <p>0730586208</p>
-      <p>robinwarelius@hotmail.se</p>
+    <div className="contactDiv border">
+      <h3 className="contactHeading">Contact details</h3>
+      <p>Phone: 0730586356</p>
+      <p>Email: robinwarelius@hotmail.se</p>
+      <p>Adress: Skeppsholmen 12 | 14642 | Stockholm</p>
     </div>
   );
 };

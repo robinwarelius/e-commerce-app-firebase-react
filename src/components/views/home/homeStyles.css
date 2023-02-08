@@ -1,0 +1,100 @@
+.headingHome {
+  font-weight: 800;
+  font-size: 400%;
+  text-align: center;
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+  color: black;
+  line-height: 1.2;
+}
+
+#contentDiv {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.productDiv {
+  border-radius: 20px;
+  padding-top: 30px;
+  margin: 15px 15px 0 15px;
+  background-color: #fff;
+  height: 470px;
+  width: 350px;
+  text-align: center;
+  box-shadow: 0 1px 5px rgb(138, 137, 137);
+  float: left;
+}
+
+#searchResultDiv {
+  height: 550px;
+}
+
+#productDivDetails {
+  height: 550px;
+  width: 400px;
+  margin: 0 auto;
+  float: none;
+}
+
+#resultDiv {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.imgProduct {
+  width: 200px;
+  height: 200px;
+  margin: 15px 0;
+}
+
+.imgCard {
+  width: 40px;
+  height: 40px;
+  margin-left: 20px;
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+.imgCard:hover {
+  opacity: 1;
+}
+
+/* #imgSpin {
+  transform: rotate(360deg);
+  transition: all 0.6s ease-in-out 0s;
+} */
+
+.searchDiv {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.searchInput {
+  border: 1px solid rgba(5, 5, 5, 0.4);
+  background-color: rgb(241, 244, 245);
+  width: 78%;
+  border-radius: 20px;
+  font-family: "Source Sans Pro", sans-serif;
+  padding: 10px 15px;
+  margin: 0 auto 10px auto;
+  display: block;
+  text-align: center;
+  font-size: 18px;
+  color: black;
+  font-weight: 300;
+}
+
+.colorLetter {
+  color: #6bbe92;
+}
+
+.buttonHome {
+  background-color: #6bbe92;
+  opacity: 0.8;
+}
+
+.buttonHome:hover {
+  background-color: #6bbe92;
+  opacity: 1;
+  border: 1px solid black;
+}
